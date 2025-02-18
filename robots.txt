@@ -6,8 +6,5 @@ Allow: *.webp
 Allow: *.jpg
 Allow: *.jpeg
 Allow: *.png
-Disallow: /wp-admin/
-Disallow: /cgi-bin
-Disallow: */feed
 
 Sitemap: https://jlexaii.github.io/casino-1win-ar/index.html
