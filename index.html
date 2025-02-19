@@ -490,6 +490,18 @@
 	<meta content="noindex, nofollow" name="robots" />
 	<link href="https://jlexaii.github.io/casino-1win-ar" hreflang="en-tz" rel="alternate" />
 	<link href="https://jlexaii.github.io/casino-1win-ar" rel="canonical" />
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Получаем текущий путь
+			let path = window.location.pathname;
+	
+			// Проверяем, что путь НЕ является корневым и заканчивается на "/"
+			if (path !== "/" && path.endsWith("/")) {
+				let newPath = path.slice(0, -1); // Убираем последний "/"
+				window.history.replaceState(null, "", newPath); // Обновляем URL без перезагрузки
+			}
+		});
+	</script>
 	
 	
 </head>
