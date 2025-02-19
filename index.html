@@ -494,15 +494,12 @@
 		document.addEventListener("DOMContentLoaded", function () {
 			let path = window.location.pathname;
 			
-			// Определяем, находимся ли мы на второстепенной странице
-			if (path.startsWith("/casino-1win-ar/") && path !== "/casino-1win-ar/" && path.endsWith("/")) {
-				let newPath = path.slice(0, -1); // Убираем слеш в конце
-				window.history.replaceState(null, "", newPath); // Обновляем URL
+			// Убираем слеш только на вторичных страницах, но не на главной
+			if (path !== "/" && path.endsWith("/")) {
+				history.replaceState(null, "", path.slice(0, -1));
 			}
 		});
 	</script>
-	
-	
 	
 </head>
 
