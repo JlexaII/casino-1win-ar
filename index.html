@@ -490,6 +490,14 @@
 	<meta content="noindex, nofollow" name="robots" />
 	<link href="https://jlexaii.github.io/casino-1win-ar/" hreflang="en-tz" rel="alternate" />
 	<link href="https://jlexaii.github.io/casino-1win-ar/" rel="canonical" />
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			if (window.location.pathname.endsWith("/")) {
+				window.history.replaceState(null, "", window.location.pathname.slice(0, -1));
+			}
+		});
+	</script>
+
 </head>
 
 <body class="home page-template-default page page-id-2 wp-custom-logo">
@@ -1130,7 +1138,7 @@
 		</script>
 	</footer>
 	<script defer="" src="wp-content/cache/autoptimize/js/autoptimize_b41179e9328b7887f39307a3591d9444.js"></script>
- 
+
 
 </body>
 
