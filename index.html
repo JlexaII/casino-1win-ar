@@ -493,18 +493,15 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			let path = window.location.pathname;
+			let isMainPage = path === "/casino-1win-ar/" || path === "/casino-1win-ar";
 	
-			// Если это главная страница и нет слеша в конце, добавляем его
-			if (path === "/casino-1win-ar" && !path.endsWith("/")) {
-				window.history.replaceState(null, "", path + "/");
-			}
-	
-			// Если это не главная страница и в конце есть слеш, убираем его
-			else if (path !== "/casino-1win-ar" && path.endsWith("/")) {
-				window.history.replaceState(null, "", path.slice(0, -1));
+			if (!isMainPage && path.endsWith("/")) {
+				let newPath = path.slice(0, -1); // Убираем слеш
+				window.history.replaceState(null, "", newPath);
 			}
 		});
 	</script>
+	
 	
 	
 </head>
