@@ -489,24 +489,23 @@
 		type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "url": "https://jlexaii.github.io/casino-1win-ar/", "potentialAction": {"@type": "SearchAction", "target": "https://jlexaii.github.io/casino-1win-ar/search?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
 	<meta content="noindex, nofollow" name="robots" />
 	<link href="https://jlexaii.github.io/casino-1win-ar" hreflang="en-tz" rel="alternate" />
-	<link href="https://jlexaii.github.io/casino-1win-ar" rel="canonical" />	
+	<link href="https://jlexaii.github.io/casino-1win-ar/" rel="canonical" />	
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			let path = window.location.pathname;
 	
-			// Если это главная страница (корень сайта) и нет слэша – добавляем его
-			if (path === "/casino-1win-ar" || path === "/casino-1win-ar/") {
-				if (!path.endsWith("/")) {
-					window.history.replaceState(null, "", path + "/");
-				}
+			// Если это главная страница и нет слеша в конце, добавляем его
+			if (path === "/casino-1win-ar" && !path.endsWith("/")) {
+				window.history.replaceState(null, "", path + "/");
 			}
 	
-			// Если это вторичная страница и есть слеш в конце – убираем его
-			else if (path.endsWith("/")) {
+			// Если это не главная страница и в конце есть слеш, убираем его
+			else if (path !== "/casino-1win-ar" && path.endsWith("/")) {
 				window.history.replaceState(null, "", path.slice(0, -1));
 			}
 		});
 	</script>
+	
 	
 </head>
 
