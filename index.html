@@ -490,24 +490,7 @@
 	<meta content="noindex, nofollow" name="robots" />
 	<link href="https://jlexaii.github.io/casino-1win-ar" hreflang="en-tz" rel="alternate" />
 	<link href="https://jlexaii.github.io/casino-1win-ar" rel="canonical" />
-	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			// Получаем текущий URL
-			let path = window.location.pathname;
 	
-			// Убираем название репозитория (если есть)
-			let repoName = "/casino-1win-ar";
-			if (path.startsWith(repoName)) {
-				path = path.replace(repoName, "");
-			}
-	
-			// Если НЕ главная и путь заканчивается на `/`, то редиректим
-			if (path !== "/" && path.endsWith("/")) {
-				let newUrl = window.location.origin + repoName + path.slice(0, -1) + window.location.search;
-				window.location.replace(newUrl);
-			}
-		});
-	</script>
 	
 </head>
 
