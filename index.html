@@ -492,16 +492,16 @@
 	<link href="https://jlexaii.github.io/casino-1win-ar" rel="canonical" />
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
-			// Получаем текущий путь
 			let path = window.location.pathname;
-	
-			// Проверяем, что путь НЕ является корневым и заканчивается на "/"
-			if (path !== "/" && path.endsWith("/")) {
-				let newPath = path.slice(0, -1); // Убираем последний "/"
-				window.history.replaceState(null, "", newPath); // Обновляем URL без перезагрузки
+			
+			// Определяем, находимся ли мы на второстепенной странице
+			if (path.startsWith("/casino-1win-ar/") && path !== "/casino-1win-ar/" && path.endsWith("/")) {
+				let newPath = path.slice(0, -1); // Убираем слеш в конце
+				window.history.replaceState(null, "", newPath); // Обновляем URL
 			}
 		});
 	</script>
+	
 	
 	
 </head>
