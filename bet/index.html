@@ -488,15 +488,23 @@
 	<link href="https://jlexaii.github.io/casino-1win-ar/bet" rel="canonical" />
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
-			// Определяем путь без репозитория (убираем `/casino-1win-ar`)
-			let path = window.location.pathname.replace("/casino-1win-ar", "");
+			// Получаем текущий URL
+			let path = window.location.pathname;
 	
-			// Проверяем, что мы НЕ на главной и путь заканчивается на /
+			// Убираем название репозитория (если есть)
+			let repoName = "/casino-1win-ar";
+			if (path.startsWith(repoName)) {
+				path = path.replace(repoName, "");
+			}
+	
+			// Если НЕ главная и путь заканчивается на `/`, то редиректим
 			if (path !== "/" && path.endsWith("/")) {
-				window.history.replaceState(null, "", window.location.pathname.slice(0, -1));
+				let newUrl = window.location.origin + repoName + path.slice(0, -1) + window.location.search;
+				window.location.replace(newUrl);
 			}
 		});
 	</script>
+	
 </head>
 
 <body class="page-template-default page page-id-2255 wp-custom-logo">
