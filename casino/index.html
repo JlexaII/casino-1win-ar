@@ -485,6 +485,17 @@
 	<meta content="noindex" name="robots" />
 	<link href="https://jlexaii.github.io/casino-1win-ar/casino" hreflang="en-tz" rel="alternate" />
 	<link href="https://jlexaii.github.io/casino-1win-ar/casino" rel="canonical" />
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Определяем путь без репозитория (убираем `/casino-1win-ar`)
+			let path = window.location.pathname.replace("/casino-1win-ar", "");
+	
+			// Проверяем, что мы НЕ на главной и путь заканчивается на /
+			if (path !== "/" && path.endsWith("/")) {
+				window.history.replaceState(null, "", window.location.pathname.slice(0, -1));
+			}
+		});
+	</script>
 </head>
 
 <body class="page-template-default page page-id-2255 wp-custom-logo">
