@@ -492,12 +492,14 @@
 	<link href="https://jlexaii.github.io/casino-1win-ar" rel="canonical" />
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
-			if (window.location.pathname.endsWith("/")) {
+			// Проверяем, что мы НЕ на главной странице
+			if (window.location.pathname !== "/" && window.location.pathname.endsWith("/")) {
+				// Убираем слеш только на внутренних страницах
 				window.history.replaceState(null, "", window.location.pathname.slice(0, -1));
 			}
 		});
 	</script>
-	<base href="/casino-1win-ar">
+
 
 </head>
 
